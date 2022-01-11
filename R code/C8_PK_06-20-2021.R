@@ -23,10 +23,8 @@ setwd("~/Desktop/My files in Dropbox/PK Bayesian/data")
 
 #demog091006 <- read_csv("VariableInformation/demog091006.csv")
 #chem091006 <- read_csv("VariableInformation/chem091006.csv")
-BrkmrReshx1 <- read.table("BrkmrReshx_Feb7_updated_savitzonly.csv", 
-                          header = F, sep = ",")
-BrkmrReshx <- read.table("BrkmrReshx_May3_savitzonly.csv", 
-                         header = F, sep = ",")
+BrkmrReshx1 <- read.table("BrkmrReshx_Feb7_updated_savitzonly.csv", header = F, sep = ",")
+BrkmrReshx <- read.table("BrkmrReshx_May3_savitzonly.csv", header = F, sep = ",")
 BrkmrWorkhx <- read.table("BrkmrWorkhx_savitzonly.csv", header = F, sep = ",")
 
 Tot_Ingestional_dose <- read_csv("Tot_Ingestional_dose.csv")
@@ -52,10 +50,8 @@ Body.Weight <- data.frame(Age.group = c("0 to <1", "1 to <2", "2 to <3", "3 to <
                                         "21 to <30", "30 to <40", "40 to <50", "50 to <60", "60 to <70", "70 to <80", ">80"),
                           Body.weight = c(6.55, 11.1, 13.2, 17.5, 29.0, 53.3, 61.5, 67.9, 70.2, 72.7, 73.6, 73.9, 69.0, 62.8))
 
-water_consumption0 <- read.table("Matlab code for body weight and water consumption rates over time/water_consumption0.csv",
-                                 header = FALSE, sep = ",")
-waterconsumption_2_11_2011 <- read.table("Matlab code for body weight and water consumption rates over time/waterconsumption_2_11_2011.csv",
-                                         header = TRUE, sep = ",")
+water_consumption0 <- read.table("Matlab code for body weight and water consumption rates over time/water_consumption0.csv", header = FALSE, sep = ",")
+waterconsumption_2_11_2011 <- read.table("Matlab code for body weight and water consumption rates over time/waterconsumption_2_11_2011.csv", header = TRUE, sep = ",")
 
 
 waterconsumption <- waterconsumption_2_11_2011 %>% 
