@@ -101,8 +101,7 @@ sum(is.na(WT))
 
 ### year-by-year Pharmacokinetic weight matrix
 W <- array(0, dim = c(6134, 58, 7), 
-           dimnames = list(ids$ID, paste0("Year", 195
-                                          1:2008), c("yr1", "yr2", "yr3", "yr4", "yr5", "yr6", "test")))
+           dimnames = list(ids$ID, paste0("Year", 1951:2008), c("yr1", "yr2", "yr3", "yr4", "yr5", "yr6", "test")))
 
 
 ################################################################## R code written by Yachen Zhu ########################################################################
@@ -902,6 +901,6 @@ for(i in 1:dim(C8.est.abc)[3]){   # 333
 }
 
 exp( mean(r[, 1]) )
-exp( mean(r[, 1]) - qnorm(0.975) * sqrt(mean(r[, 2]^2) + var(r[, 1])) )
+exp( mean(r[, 1]) - qnorm(0.975) * sqrt(mean(r[, 2]^2) + var(r[, 1])) ) # computed the variance using the law of total variance
 exp( mean(r[, 1]) + qnorm(0.975) * sqrt(mean(r[, 2]^2) + var(r[, 1])) )
 # 1.13, 95% CI: [0.82, 1.56]

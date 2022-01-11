@@ -101,8 +101,7 @@ sum(is.na(WT))
 
 ### year-by-year Pharmacokinetic weight matrix
 W <- array(0, dim = c(6134, 58, 7), 
-           dimnames = list(ids$ID, paste0("Year", 195
-                                          1:2008), c("yr1", "yr2", "yr3", "yr4", "yr5", "yr6", "test")))
+           dimnames = list(ids$ID, paste0("Year", 1951:2008), c("yr1", "yr2", "yr3", "yr4", "yr5", "yr6", "test")))
 
 
 ################################################################## R code written by Yachen Zhu ########################################################################
