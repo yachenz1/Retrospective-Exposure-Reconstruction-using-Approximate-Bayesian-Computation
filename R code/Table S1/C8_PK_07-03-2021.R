@@ -21,8 +21,6 @@ library(readxl)
 
 setwd("~/Desktop/PK Bayesian/data")
 
-#demog091006 <- read_csv("VariableInformation/demog091006.csv")
-#chem091006 <- read_csv("VariableInformation/chem091006.csv")
 BrkmrReshx1 <- read.table("~/Desktop/PK Bayesian/data/BrkmrReshx_Feb7_updated_savitzonly.csv", 
                           header = F, sep = ",")
 BrkmrReshx <- read.table("~/Desktop/PK Bayesian/data/BrkmrReshx_May3_savitzonly.csv", 
@@ -402,15 +400,6 @@ GAC_TP <- 2006
 GAC_MC <- 2008
 GAC_PO <- 2006
 
-## Assuming sigma = 2 * mu
-# log_mu_Mason <- unname( unlist( log( conc_Mason[2, ] / sqrt(1+2^2) ) ) )
-# log_mu_Pomeroy <- unname( unlist( log( conc_Pomeroy[2, ] / sqrt(1+2^2) ) ) )
-# log_mu_Belpre <- unname( unlist( log( conc_Belpre[2, ] / sqrt(1+2^2) ) ) )
-# log_mu_LittleHocking <- unname( unlist( log( conc_LittleHocking[2, ] / sqrt(1+2^2) ) ) )
-# log_mu_Lubeck <- unname( unlist( log( conc_Lubeck[2, ] / sqrt(1+2^2) ) ) )
-# log_mu_TuppersPlains <- unname( unlist( log( conc_TuppersPlains[2, ] / sqrt(1+2^2) ) ) )
-
-# L <- length(log_mu_Mason)
 
 L <- 58
 corr <- toeplitz(0.9^(0:(L-1)))   # AR(1) correlation structure
@@ -730,7 +719,7 @@ for( q in 1:l ){
   EC_IN_BR2 <- EC_IN_BR * EF_IH_BR1   # end of translated version Matlab code ExConc_water_BR6_savitzonly_geo_2_work.m 
   
   
-  ################################# R code written by Yachen Zhu, 2020 #################################
+  ############################################################################# R code written by Yachen Zhu, 2020 #######################################################################
   EC_IN_BR2 <- cbind(BrkmrReshx[, 1], EC_IN_BR2)
   colnames(EC_IN_BR2) <- c("ID",  paste0("Year", 1:58))
   
